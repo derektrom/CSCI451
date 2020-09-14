@@ -19,7 +19,7 @@ int  main(int argc, char *argv[])
     PID = fork();
     if (PID == 0)
     {
-        system("./a.out");
+        execv("./a.out", NULL);
 	    exit(exitcode);
     }
     else
