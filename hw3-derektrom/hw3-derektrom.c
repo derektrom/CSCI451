@@ -80,21 +80,28 @@ void* findWord(void* dataStruct)
     int i;
     for (i = 0; i < data->fileSize; i++) 
     {
+        //i = start of word
+        //letter index is the second pointer to search for the rest of the letters
+        //lower case the index to match cases
         data->file[i] = tolower(data->file[i]);
+
         if(data->file[i] == data->search[letterIndex])
         {
+            //matched a letter now search next index for matching next letters
             ++letterIndex;
             if(letterIndex == wordlen)
             {
-                // match
+                // match found for full word increment count
+                //reset the letterIndex to search for more occurrences
                 (*data->counter)++;
                 letterIndex = 0;
             }
         }
         else
         {
-           i -=letterIndex;
-           letterIndex = 0;
+            //no match yet 
+            i -=letterIndex;
+            letterIndex = 0;
         }
     } 
 }
