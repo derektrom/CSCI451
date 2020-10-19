@@ -1,3 +1,6 @@
+/************************
+*@author Patrick Dougherty
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
