@@ -1,3 +1,3 @@
 <h1>Homework 7</h1>
-@mentions doughertypat
+@doughertypat<br>
 Patrick provided test.c
